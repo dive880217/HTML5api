@@ -1,0 +1,16 @@
+#leftbox{
+    border: 5px dashed rgb(209, 7, 7);
+    width: 240px;
+    height: 240px;
+    padding: 5px;
+    margin: 5px;
+    float: left;
+}
+#rightbox {
+    border: 5px dashed rgb(25, 16, 153);
+    width: 240px;
+    height: 240px;
+    padding: 5px;
+    margin: 5px;
+    float: left;
+}
