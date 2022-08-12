@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQueryUI -- draggable</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#drag').draggable({
+                cursor: 'crosshair',
+                // opacity: 0.6,
+                // revert: true,  // 回到原點
+                // axis: 'x',
+
+                // 限制拖曳範圍
+                containment: 'parent',
+                // containment: 'window',
+                // containment: 'documemt',  // by default
+                // containment: [0,0,300,300],
+
+                start() {
+                    // $('#feedback').text('Dragging started.')
+                },
+                drag() {
+                    $('#feedback').text('Dragging.')
+                },
+                stop() {
+                    $('#feedback').text('Dragging ended.')
+                },
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div style="width:300px;height:300px;background: #ccc;">
+        <span style="background: lightseagreen;" id="drag">Drag me</span>
+    </div>
+    <p id="feedback"></p>
+</body>
+
+</html>
